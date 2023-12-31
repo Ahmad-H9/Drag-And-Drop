@@ -1,0 +1,133 @@
+:root{
+
+
+  --trans: 0.3s; 
+  --rad: 5px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "cairo", sans-serif;
+
+  transition: var(--trans);
+  -webkit-transition: var(--trans);
+  -moz-transition: var(--trans);
+  -ms-transition: var(--trans);
+  -o-transition: var(--trans);
+}
+
+
+body{
+  background-color: #222;
+}
+.container, .inputs, .inputs .data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  padding: 20px; 
+
+  gap: 30px;
+  height: 100vh;
+}
+
+
+.inputs{
+  background-color: white;
+  padding: 10px 15px;
+  width: 300px;
+  min-height: 120px;
+  gap: 10px;
+  border-radius: var(--rad);
+  -webkit-border-radius: var(--rad);
+  -moz-border-radius: var(--rad);
+  -ms-border-radius: var(--rad);
+  -o-border-radius: var(--rad);
+}
+h2{
+  font-size: 32px;
+}
+.inputs .data{
+  align-items: normal;
+  gap: 5px;
+  width: 80%;
+}
+.data input{
+  padding: 5px;
+  outline: none;
+  border:  1px solid #ddd;
+  border-radius: var(--rad);
+  -webkit-border-radius: var(--rad);
+  -moz-border-radius: var(--rad);
+  -ms-border-radius: var(--rad);
+  -o-border-radius: var(--rad);
+}
+
+.data button{
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+
+  border-radius: var(--rad);
+  -webkit-border-radius: var(--rad);
+  -moz-border-radius: var(--rad);
+  -ms-border-radius: var(--rad);
+  -o-border-radius: var(--rad);
+}
+
+.list {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 5px;
+  width: 100%;
+  
+}
+.list .box{
+  background-color: white;
+  padding: 10px;
+  width: 200px;
+
+  border-radius: calc(var(--rad) + 4px);
+  -webkit-border-radius: calc(var(--rad) + 4px);
+  -moz-border-radius: calc(var(--rad) + 4px);
+  -ms-border-radius: calc(var(--rad) + 4px);
+  -o-border-radius: calc(var(--rad) + 4px);
+}
+.box h2{
+  text-align: center;
+
+}
+.box .item{
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #333;
+  color: white;
+  cursor: move;
+  border-radius: var(--rad);
+  -webkit-border-radius: var(--rad);
+  -moz-border-radius: var(--rad);
+  -ms-border-radius: var(--rad);
+  -o-border-radius: var(--rad);
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+.box .item:first-of-type{
+  margin-top: 15px;
+}
+
+@media (max-width: 767px) {
+  .list {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
